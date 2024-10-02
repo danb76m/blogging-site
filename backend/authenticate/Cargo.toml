@@ -1,0 +1,20 @@
+[package]
+name = "authenticate"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-session = { version = "0.10.0", features = ["redis-session", "redis-pool"] }
+actix-web = "4.9.0"
+deadpool-redis = "0.17.0"
+env_logger = "0.11.5"
+pwhash = "1.0.0"
+rand = "0.8.5"
+redis = { version = "0.27.0" }
+reqwest = "0.12.7"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+uuid = { version = "1.10.0", features = ["v4", "fast-rng", "macro-diagnostics"] }
+user = { path = "../user", version = "0.1.0" }
+mongodb = "3.1.0"
+futures = "0.3.30"
