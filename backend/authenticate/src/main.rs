@@ -19,9 +19,6 @@ pub struct OAuthConfig {
 
 #[actix_web::main]
 pub async fn main() -> std::io::Result<()> {
-        env::set_var("RUST_LOG", "actix_web=trace");
-        env_logger::init();
-
     let oauth_config_data = web::Data::new(OAuthConfig {
         client_id: env::var("BLOG_CLIENT_ID").unwrap().to_string(),
         client_secret: env::var("BLOG_CLIENT_SECRET").unwrap().to_string(),
